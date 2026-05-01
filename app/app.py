@@ -13,7 +13,7 @@ def home():
     return """
     <html>
         <body>
-            <h1>URL Health Monitor 🏥</h1>
+            <h1>URL Health Monitor🏥</h1>
             <p>Running on Kubernetes pod: <b>{}</b></p>
             <a href="/health">View health check results →</a>
         </body>
