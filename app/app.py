@@ -8,6 +8,24 @@ app = Flask(__name__)
 def get_db_connection():
     return psycopg2.connect(os.environ.get("DATABASE_URL"))
 
+# Add this function in app.py
+def init_db():
+    conn = get_db_connection()
+    cur = conn.cursor()
+    cur.execute("""
+        CREATE TABLE IF NOT EXISTS health_checks (
+            id SERIAL PRIMARY KEY,
+            url TEXT NOT NULL,
+            status TEXT NOT NULL,
+            last_checked TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    """)
+    conn.commit()
+    conn.close()
+
+# Call it when app starts (before first route)
+init_db()
+
 @app.route("/")
 def home():
     return """
