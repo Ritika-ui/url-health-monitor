@@ -3,6 +3,7 @@ import time
 import requests
 import psycopg2
 from datetime import datetime
+from database import get_db_connection
 
 # List of URLs to monitor
 URLS = [

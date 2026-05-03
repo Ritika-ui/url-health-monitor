@@ -2,6 +2,7 @@ import os
 import psycopg2
 from datetime import datetime
 from flask import Flask, jsonify
+from database import get_db_connection
 
 app = Flask(__name__)
 
