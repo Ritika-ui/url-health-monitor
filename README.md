@@ -8,7 +8,6 @@
 ---
 
 ## 📌 What It Does
-
 - Automatically checks if websites are **UP** or **DOWN** every 30 seconds
 - Stores full health check history in **PostgreSQL**
 - Exposes a clean **REST API** to query results
