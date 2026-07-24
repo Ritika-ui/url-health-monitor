@@ -3,8 +3,6 @@
 > A containerized API that automatically monitors websites and tracks their uptime history.  
 > Built with Flask, PostgreSQL, Docker, and Kubernetes.
 
-
-
 ---
 
 ## 📌 What It Does
